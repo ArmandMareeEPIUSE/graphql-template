@@ -1,0 +1,15 @@
+extend type Query {
+  dummy(id: ID!): Dummy
+  dummies: [Dummy!]!
+}
+
+extend type Mutation {
+  createDummy(name: String!): Dummy!
+  updateDummy(id: ID!, name: String!): Dummy!
+  deleteDummy(id: ID!): Dummy!
+}
+
+type Dummy {
+  id: ID!
+  name: String!
+}
